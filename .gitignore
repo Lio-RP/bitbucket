@@ -1,0 +1,6 @@
+DocsManagement.sln
+**.csproj*
+/DocsManagement/bin/
+/DocsManagement/obj/
+/DocsManagement.Tests/obj/
+/DocsManagement.Tests/bin/

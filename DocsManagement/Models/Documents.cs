@@ -8,7 +8,7 @@ namespace DocsManagement.Models
     public class Documents
     {
         public int RegistrationNomer { get; set; }
-        public DateTime RegistrationDate { get; set; }
+        public String RegistrationDate { get; set; }
         public String TypeDocument { get; set; }
         public String StateDocument { get; set; }
         public String CreatedUser { get; set; }

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<AgreementDocs>
+@foreach (var serDocs in Model)
+{
+    <div>
+        @serDocs.RegistrationNomer
+        @serDocs.RegistrationDate
+        @serDocs.TypeDocument
+        @serDocs.StateDocument
+        @serDocs.CreatedUser
+        @serDocs.SignedUser
+        @serDocs.NumerSheets
+        @serDocs.Summary
+        @serDocs.TypeAgreement
+        @serDocs.DeadlineAgreement
+        @serDocs.Contractor
+        @serDocs.Amount
+    </div>
+}

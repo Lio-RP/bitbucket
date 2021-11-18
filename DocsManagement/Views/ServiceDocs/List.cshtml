@@ -1,0 +1,77 @@
+﻿@model IEnumerable<DocsManagement.Models.ServicesDocs>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RegistrationNomer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RegistrationDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TypeDocument)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StateDocument)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedUser)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SignedUser)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumerSheets)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Summary)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationNomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistrationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeDocument)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateDocument)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignedUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumerSheets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Summary)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

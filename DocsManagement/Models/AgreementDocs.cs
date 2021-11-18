@@ -8,7 +8,7 @@ namespace DocsManagement.Models
     public class AgreementDocs : Documents
     {
         public String TypeAgreement { get; set; }
-        public DateTime DeadlineAgreement { get; set; }
+        public String DeadlineAgreement { get; set; }
         public String Contractor { get; set; }
         public decimal Amount { get; set; }
     }

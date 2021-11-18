@@ -2,5 +2,7 @@ DocsManagement.sln
 **.csproj*
 /DocsManagement/bin/
 /DocsManagement/obj/
+/DocsManagement/Models/FakeAgreementDocsRepository.cs
+/DocsManagement/Models/FakeServiceDocsRepository.cs
 /DocsManagement.Test/obj/
 /DocsManagement.Test/bin/

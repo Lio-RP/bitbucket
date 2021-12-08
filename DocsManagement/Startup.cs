@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 using DocsManagement.Models;
 using Microsoft.EntityFrameworkCore;
+=======
+﻿using Microsoft.Owin;
+using Owin;
+>>>>>>> 2cb8d9d (Добовлен Controllers, Views и подклучин к БД)
 
+[assembly: OwinStartupAttribute(typeof(DocsManagement.Startup))]
 namespace DocsManagement
 {
-    public class Startup
+    public partial class Startup
     {
+<<<<<<< HEAD
         public Startup(IConfiguration configuration) => Configuration = configuration;
         public IConfiguration Configuration { get; }
 
@@ -36,6 +43,11 @@ namespace DocsManagement
                     template: "{controller=ServiceDocs}/{action=List}/{RegistrationNomer?}");
 
             });
+=======
+        public void Configuration(IAppBuilder app)
+        {
+            ConfigureAuth(app);
+>>>>>>> 2cb8d9d (Добовлен Controllers, Views и подклучин к БД)
         }
     }
 }

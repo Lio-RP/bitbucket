@@ -1,0 +1,15 @@
+DocsManagement.sln
+DocsManagement.v*.suo
+**.csproj*
+/packages/
+/DocsManagement/App_Data/
+/DocsManagement/Content/themes/
+/DocsManagement/bin/
+/DocsManagement/obj/
+/DocsManagement/Models/FakeAgreementDocsRepository.cs
+/DocsManagement/Models/FakeServiceDocsRepository.cs
+/DocsManagement/Scripts/
+/DocsManagement/packages.config
+/DocsManagement/favicon.ico
+/DocsManagement.Tests/obj/
+/DocsManagement.Tests/bin/

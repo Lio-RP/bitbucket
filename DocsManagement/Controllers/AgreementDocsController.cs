@@ -48,36 +48,6 @@ namespace DocsManagement.Controllers
             
             if (ModelState.IsValid)
             {
-                /*
-                String File = SaveToPhysicalLocation(agreementDocs.File);
-                FileInfo fil = new FileInfo(File);
-
-                using (DocumentsDBEntities doc = new DocumentsDBEntities())
-                {
-                    var agDoc = new Agreement()
-                    {
-                        RegistrationNomer = agreementDocs.RegistrationNomer,
-                        RegistrationData = agreementDocs.RegistrationData,
-                        TypeDocument = agreementDocs.TypeDocument,
-                        StateDocument = agreementDocs.StateDocument,
-                        TypeAgreement = agreementDocs.TypeAgreement,
-                        DeadlineAgreement = agreementDocs.DeadlineAgreement,
-                        Conractor = agreementDocs.Contractor,
-                        Amount = agreementDocs.Amount,
-                        CreatedUser = agreementDocs.CreatedUser,
-                        SignedUser = agreementDocs.SignedUser,
-                        NumberSheets = agreementDocs.NumberSheets,
-                        Summary = agreementDocs.Summary,
-                        FileName = Path.GetFileName(File),
-                        FileType = fil.Extension,
-                        FileContent = System.IO.File.ReadAllBytes(File)
-
-                    };
-                    doc.Agreements.Add(agDoc);
-                    doc.SaveChanges();
-                    return RedirectToAction("List");
-                    //
-                }*/
                 String File = SaveToPhysicalLocation(agreementDocs.File);
                 ef.SaveAgreementDocuments(agreementDocs, File);
                 return RedirectToAction("List");

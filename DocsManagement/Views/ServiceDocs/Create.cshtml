@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Creating Service Documents</title>
     <script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")" type="text/javascript"></script>
     <style>
         table, th, td {
@@ -18,6 +18,10 @@
         thead {
             background-color: skyblue;
             color: white;
+        }
+        body{
+            display:flex;
+            right:50%;
         }
     </style>
 </head>
@@ -36,10 +40,10 @@
 
                 <tr>
                     <td>
-                        @Html.LabelFor(m => m.RegistrationNomer)<b style="color:red"> *</b>
+                        <label>Номер Рег.</label><b style="color:red"> *</b>
                     </td>
                     <td>
-                        @Html.TextBoxFor(m => m.RegistrationNomer, new { @type = "number" })
+                        @Html.TextBoxFor(m => m.RegistrationNomer, new { @class = "form-control" })
                     </td>
                 </tr>
                 <tr>
@@ -55,7 +59,7 @@
                         @Html.LabelFor(m => m.TypeDocument)<b style="color:red"> *</b>
                     </td>
                     <td>
-                        @Html.TextBoxFor(m => m.TypeDocument, new { @type = "text" })
+                        @Html.TextBoxFor(m => m.TypeDocument, new { @class = "form-control" })
                     </td>
                 </tr>
                 <tr>
@@ -63,7 +67,7 @@
                         @Html.LabelFor(m => m.StateDocument)<b style="color:red"> *</b>
                     </td>
                     <td>
-                        @Html.TextBoxFor(m => m.StateDocument, new { @type = "text" })
+                        @Html.TextBoxFor(m => m.StateDocument, new { @class = "form-control" })
                     </td>
                 </tr>
                 <tr>
@@ -71,7 +75,7 @@
                         @Html.LabelFor(m => m.CreatedUser)<b style="color:red"> *</b>
                     </td>
                     <td>
-                        @Html.TextBoxFor(m => m.CreatedUser, new { @type = "text" })
+                        @Html.TextBoxFor(m => m.CreatedUser, new { @class = "form-control" })
                     </td>
                 </tr>
                 <tr>
@@ -79,7 +83,7 @@
                         @Html.LabelFor(m => m.SignedUser)<b style="color:red"> *</b>
                     </td>
                     <td>
-                        @Html.TextBoxFor(m => m.SignedUser, new { @type = "text" })
+                        @Html.TextBoxFor(m => m.SignedUser, new { @class = "form-control" })
                     </td>
                 </tr>
                 <tr>
@@ -87,15 +91,15 @@
                         @Html.LabelFor(m => m.NumberSheets)<b style="color:red"> *</b>
                     </td>
                     <td>
-                        @Html.TextBoxFor(m => m.NumberSheets, new { @type = "number" })
+                        @Html.TextBoxFor(m => m.NumberSheets, new { @class = "form-control" })
                     </td>
                 </tr>
                 <tr>
                     <td>
                         @Html.LabelFor(m => m.Summary)<b style="color:red"> *</b>
                     </td>
-                    <td style="width:30px; height:10px">
-                        @Html.TextBoxFor(m => m.Summary, new { @type = "text" })
+                    <td>
+                        @Html.TextAreaFor(m => m.Summary, new { @class = "form-control" })
                     </td>
                 </tr>
                 <tr>

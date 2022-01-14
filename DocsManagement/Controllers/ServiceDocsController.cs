@@ -69,18 +69,10 @@ namespace DocsManagement.Controllers
         public FileResult Download(int id)
         {
             Service doc = context.Services.Find(id);
-            //string fullpath = Path.Combine(Server.MapPath("~/App_Data/UploadedFiles"), doc.FileName);
-            //FileInfo file = new FileInfo(fullpath);
-            //String fileName = Path.GetFileName(fullpath);
-            //byte[] fileContent = System.IO.File.ReadAllBytes(fullpath);
-            //String ext = file.Extension;
-            //return File(fileContent, ext, fileName);
             return File(doc.FileContent, doc.FileType, doc.FileName);
         }
 
 
-
-        // GET: AgreementDocs/Edit/5
         [Authorize(Roles = "Manager")]
         public ActionResult Edit(int id)
         {
@@ -92,7 +84,6 @@ namespace DocsManagement.Controllers
             return View(doc);
         }
 
-        // POST: AgreementDocs/Edit/5
         [HttpPost]
         public ActionResult Edit(Service doc)
         {
@@ -105,7 +96,6 @@ namespace DocsManagement.Controllers
             return View(doc);
         }
 
-        // GET: AgreementDocs/Delete/5
         [Authorize(Roles = "Manager")]
         public ActionResult Delete(int id)
         {
@@ -117,7 +107,6 @@ namespace DocsManagement.Controllers
             return View(doc);
         }
 
-        // POST: AgreementDocs/Delete/5
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {

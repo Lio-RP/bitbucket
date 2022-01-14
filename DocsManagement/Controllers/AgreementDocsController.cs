@@ -12,8 +12,14 @@ namespace DocsManagement.Controllers
     public class AgreementDocsController : Controller
     {
 
-        DocumentsDBEntities context = new DocumentsDBEntities();
-        EFAgreementDocsRepository ef = new EFAgreementDocsRepository();
+        private DocumentsDBEntities context;
+        EFAgreementDocsRepository ef;
+
+        public AgreementDocsController()
+        {
+            context = new DocumentsDBEntities();
+            ef = new EFAgreementDocsRepository();
+        }
 
         // GET: AgreementDocs
         [Authorize(Roles = "Employee, Admin, Manager")]
@@ -35,9 +41,12 @@ namespace DocsManagement.Controllers
         }
 
         [Authorize(Roles = "Employee")]
+        [HttpGet]
         // GET: AgreementDocs/Create
         public ActionResult Create()
         {
+            //ViewBag.prepared = new SelectList(context.Prepareds.ToList(), "Name", "Name");
+            //ViewBag.executors = new SelectList(context.Executors.ToList(), "Name", "Name");
             return View();
         }
 
@@ -45,6 +54,7 @@ namespace DocsManagement.Controllers
         [HttpPost]
         public ActionResult Create(AgreementDocument agreementDocs)
         {
+
             
             if (ModelState.IsValid)
             {
